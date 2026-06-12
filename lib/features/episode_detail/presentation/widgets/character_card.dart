@@ -109,8 +109,8 @@ class _StatusBadge extends StatelessWidget {
   Widget build(BuildContext context) {
     final (label, dotColor) = switch (status) {
       'Alive' => ('Vivo', AppColors.statusAlive),
-      'Dead'  => ('Morto', AppColors.statusDead),
-      _       => ('Desconhecido', AppColors.statusUnknown),
+      'Dead' => ('Morto', AppColors.statusDead),
+      _ => ('Desconhecido', AppColors.statusUnknown),
     };
 
     final isAlive = status == 'Alive';
@@ -125,7 +125,11 @@ class _StatusBadge extends StatelessWidget {
             color: dotColor,
             shape: BoxShape.circle,
             boxShadow: isAlive
-                ? [BoxShadow(color: AppColors.statusAlive.withValues(alpha: 0.6), blurRadius: 6)]
+                ? [
+                    BoxShadow(
+                        color: AppColors.statusAlive.withOpacity(0.6),
+                        blurRadius: 6)
+                  ]
                 : null,
           ),
         ),
