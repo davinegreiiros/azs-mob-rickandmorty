@@ -1,9 +1,9 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../../core/errors/app_exception.dart';
-import '../../../domain/usecases/get_episodes_usecase.dart';
-import '../../../domain/usecases/toggle_favorite_usecase.dart';
-import '../../../domain/usecases/toggle_watched_usecase.dart';
-import '../../../domain/repositories/episode_repository.dart';
+import '../../../../core/errors/app_exception.dart';
+import '../../domain/usecases/get_episodes_usecase.dart';
+import '../../domain/usecases/toggle_favorite_usecase.dart';
+import '../../domain/usecases/toggle_watched_usecase.dart';
+import '../../domain/repositories/episode_repository.dart';
 import 'episodes_list_state.dart';
 
 class EpisodesListCubit extends Cubit<EpisodesListState> {
