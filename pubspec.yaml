@@ -1,0 +1,34 @@
+name: rick_and_morty_eps
+description: "teste tecnico flutter"
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.3
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  graphql_flutter: ^5.1.2       # client GraphQL
+  shared_preferences: ^2.3.0    # persistência de favoritos/vistos
+  cached_network_image: ^3.4.0  # cache de imagens (offline)
+  bloc: 9.2.1                   # gerenciamento de estado
+  flutter_bloc: ^9.1.1         # integração do BLoC com Flutter
+  equatable: ^2.0.3             # comparação de objetos (BLoc/Cubit)
+  logger: ^2.7.0
+  json_annotation: ^4.9.0
+  google_fonts: ^6.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  json_serializable: ^6.8.0
+  build_runner: ^2.4.0
+
+
+flutter:
+  uses-material-design: true
