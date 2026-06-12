@@ -24,7 +24,7 @@ class FavoritesCubit extends Cubit<FavoritesState> {
     emit(const FavoritesLoading());
     try {
       final (episodes, watchedIds) = await (
-        _getFavorites(NoParams()),
+        _getFavorites(const NoParams()),
         _repository.getWatchedIds(),
       ).wait;
 

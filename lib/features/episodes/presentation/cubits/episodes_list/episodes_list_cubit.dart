@@ -33,10 +33,13 @@ class EpisodesListCubit extends Cubit<EpisodesListState> {
 
       if (totalPages > 1) {
         final futures = [
-          for (int p = 2; p <= totalPages; p++) _getEpisodes(GetEpisodesParams(page: p)).then((r) => r.$1),
+          for (int p = 2; p <= totalPages; p++)
+            _getEpisodes(GetEpisodesParams(page: p)).then((r) => r.$1),
         ];
         final remaining = await Future.wait(futures);
-        for (final batch in remaining) all.addAll(batch);
+        for (final batch in remaining) {
+          all.addAll(batch);
+        }
       }
 
       final (favoriteIds, watchedIds) = await (
@@ -71,7 +74,9 @@ class EpisodesListCubit extends Cubit<EpisodesListState> {
     final current = state;
     if (current is EpisodesListLoaded) {
       final updated = Set<String>.from(current.favoriteIds);
-      updated.contains(episodeId) ? updated.remove(episodeId) : updated.add(episodeId);
+      updated.contains(episodeId)
+          ? updated.remove(episodeId)
+          : updated.add(episodeId);
       emit(current.copyWith(favoriteIds: updated));
     }
   }
@@ -81,7 +86,9 @@ class EpisodesListCubit extends Cubit<EpisodesListState> {
     final current = state;
     if (current is EpisodesListLoaded) {
       final updated = Set<String>.from(current.watchedIds);
-      updated.contains(episodeId) ? updated.remove(episodeId) : updated.add(episodeId);
+      updated.contains(episodeId)
+          ? updated.remove(episodeId)
+          : updated.add(episodeId);
       emit(current.copyWith(watchedIds: updated));
     }
   }
