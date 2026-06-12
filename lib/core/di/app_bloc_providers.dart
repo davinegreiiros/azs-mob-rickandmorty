@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:rick_and_morty_eps/features/episodes/presentation/cubits/episodes_list_cubit.dart';
 
 import '../../features/episodes/domain/repositories/episode_repository.dart';
 import '../../features/episodes/domain/usecases/get_episodes_usecase.dart';
 import '../../features/episodes/domain/usecases/get_favorites_usecase.dart';
 import '../../features/episodes/domain/usecases/toggle_favorite_usecase.dart';
 import '../../features/episodes/domain/usecases/toggle_watched_usecase.dart';
-import '../../features/episodes/presentation/cubits/episodes_list/episodes_list_cubit.dart';
 import '../../features/favorites_episode/presentation/cubits/favorites_cubit.dart';
 
 class AppBlocProviders extends StatelessWidget {

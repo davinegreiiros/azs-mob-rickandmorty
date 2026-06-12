@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rick_and_morty_eps/features/episodes/presentation/cubits/episodes_list_cubit.dart';
+import 'package:rick_and_morty_eps/features/episodes/presentation/cubits/episodes_list_state.dart';
 
 import '../../../../core/theme/app_theme.dart';
 import '../../../../core/widgets/skeletons.dart';
 import '../../../../features/episode_detail/presentation/pages/episode_detail_page.dart';
-import '../cubits/episodes_list/episodes_list_cubit.dart';
-import '../cubits/episodes_list/episodes_list_state.dart';
 import '../widgets/episode_card.dart';
 
 class EpisodesListPage extends StatefulWidget {

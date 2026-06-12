@@ -125,7 +125,7 @@ class _StatusBadge extends StatelessWidget {
             color: dotColor,
             shape: BoxShape.circle,
             boxShadow: isAlive
-                ? [BoxShadow(color: AppColors.statusAlive.withOpacity(0.6), blurRadius: 6)]
+                ? [BoxShadow(color: AppColors.statusAlive.withValues(alpha: 0.6), blurRadius: 6)]
                 : null,
           ),
         ),

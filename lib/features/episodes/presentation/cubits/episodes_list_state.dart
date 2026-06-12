@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import '../../../domain/entities/episode.dart';
+import 'package:rick_and_morty_eps/features/episodes/domain/entities/episode.dart';
 
 abstract class EpisodesListState extends Equatable {
   const EpisodesListState();
